@@ -1,0 +1,108 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --slate-300: hsl(212, 45%, 89%);
+    --slate-500: hsl(216, 15%, 48%);
+    --slate-900: hsl(218, 44%, 22%);
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    /* body style */
+    background-color: var(--slate-300);
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+
+    /* default text properties */
+    color: var(--slate-500);
+    font-family: Outfit, serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    line-height: 140%;
+}
+
+.container {
+    /* flexbox container filling the entire window.
+       Contains main page content and footer. */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+main {
+    /* flexbox used to center QR code component */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* The main component will grow to fill the space not used by the footer. */
+    flex-grow: 1;
+}
+
+.qr-code-component {
+    /* QR component flexbox properties */
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    /* color, size, and padding */
+    background-color: var(--white);
+    width: min-content;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+    padding-bottom: 40px;
+
+    /* border and shadow */
+    border-radius: 20px;
+    box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 4.77%);
+}
+
+.qr-code-component img {
+    border-radius: 10px;
+}
+
+.qr-code-component div {
+    /* flexbox container for QR component text */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    /* padding */
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    /* text properties */
+    text-wrap: wrap;
+    text-align: center;
+}
+
+.qr-code-component h1 {
+    margin: 0px;
+    color: var(--slate-900);
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0px;
+    line-height: 120%;
+}
+
+.qr-code-component p {
+    margin: 0px;
+}
+
+footer {
+    font-size: 11px;
+    text-align: center;
+}
+
+footer a {
+    color: hsl(228, 45%, 44%);
+}
